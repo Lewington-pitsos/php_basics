@@ -14,8 +14,7 @@
     <?php foreach($people as $person): ?>
       <li>
         <strong>
-          <?php echo $person['name']
-          ?>
+          <?php echo $person['name'] ?>
         </strong>
         <a href=<?php
           $id = $person['id'];

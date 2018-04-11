@@ -1,14 +1,13 @@
 <?php
-
+include $_SERVER['DOCUMENT_ROOT'] . '/shared/db.inc.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/shared/magic_quotes.inc.php';
 
 try {
-  $pdo = new PDO('mysql:host=localhost;dbname=phptest', 'php_basic', 'q1as1z2qwe2');
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $pdo->exec('SET NAMES "utf8"');
   if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-    $delete = "DELETE FROM people WHERE id = $id";
-    $pdo->exec($delete);
+    $delete = "DELETE FROM people WHERE id = :id";
+    $prep = $pdo->prepare($delete);
+    $prep->bindValue(':id', $_GET['delete']);
+    $prep->execute();
   } elseif(isset($_GET['name'])) {
     $insert = 'INSERT INTO people SET name = :name, age = 67';
     $prep = $pdo->prepare($insert);
