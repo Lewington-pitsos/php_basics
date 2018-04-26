@@ -25,7 +25,7 @@
   <?php foreach($res as $row): ?>
     <tr>
       <td>
-        <a href="#"><?php echo $row['name']; ?></a>
+        <a href=<?php echo "/puzzle?id=" . $row['id']?>><?php echo $row['name']; ?></a>
       </td>
       <td>
         <?php echo $row['approval']; ?>
