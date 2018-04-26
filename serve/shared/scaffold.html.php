@@ -14,6 +14,7 @@
 
  <body>
    <?php include $content; ?>
+   
    <footer>
 
    </footer>
