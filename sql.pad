@@ -1,0 +1,25 @@
+CREATE TABLE puzzles (
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  name VARCHAR(120) NOT NULL,
+  scenario TEXT NOT NULL,
+  puzzle TEXT NOT NULL,
+  notes TEXT DEFAULT NULL,
+  likes INTEGER DEFAULT 0 NOT NULL,
+  PRIMARY KEY(id)
+);
+
+INSERT INTO puzzles (name, scenario, puzzle, notes)
+  VALUES (
+    '100 Prisoners and a Lightbulb',
+    "There are 100 prisoners in solitary cells. There's a central living room with one light bulb; this bulb is initially off. No prisoner can see the light bulb from his or her own cell. Everyday, the warden picks a prisoner equally at random, and that prisoner visits the living room. While there, the prisoner can toggle the bulb if he or she wishes. Also, the prisoner has the option of asserting that all 100 prisoners have been to the living room by now. If this assertion is false, all 100 prisoners are shot. However, if it is indeed true, all prisoners are set free and inducted into MENSA, since the world could always use more smart people. Thus, the assertion should only be made if the prisoner is 100% certain of its validity.",
+    'The prisoners are allowed to get together one night in the courtyard, to discuss a plan. What plan should they agree on, so that eventually, someone will make a correct assertion?',
+    "Probability nerds love this puzzle so if you're mathematically inclined there's a lot of interesting discussion on alternative soloutions (like this eleven page document) that you can check out."
+  );
+
+  INSERT INTO puzzles (name, scenario, puzzle, notes)
+    VALUES (
+      'Pebble Bag',
+      "There are two empty bags labelled A and B respectively. You have 50 black and 50 white pebbles. You must put all of the pebbles into the two bags. A coin will then be flipped. If it is heads, you discard bag A. If it is tails, you discard bag B. From the remaining bag, you reach in and randomly select a pebble. If it is white, you live - black you die.",
+      'How should you put the pebbles in the bags so as to maximize your chances of survival?',
+      "none"
+    );

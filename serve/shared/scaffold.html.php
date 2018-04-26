@@ -13,7 +13,7 @@
  </head>
 
  <body>
-   <?php echo $content; ?>
+   <?php include $content; ?>
    <footer>
 
    </footer>
