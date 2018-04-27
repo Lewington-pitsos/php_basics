@@ -7,6 +7,6 @@ $puzzle = $res->fetch();
 
 $steps = $pdo->query(puzzle_steps($_GET['id']));
 
-$content = $_SERVER['DOCUMENT_ROOT'] . '/puzzle/edit/index.html.php';
+$content = $_SERVER['DOCUMENT_ROOT'] . '/puzzle/shared/edit.html.php';
 
 include $_SERVER['DOCUMENT_ROOT'] . '/shared/scaffold.html.php';

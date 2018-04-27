@@ -33,4 +33,5 @@
 <div class='nav'>
   <a href='/'>Back</a>
   <a href=<?php echo strtok($_SERVER['REQUEST_URI'], '?') . 'edit?' . $_SERVER['QUERY_STRING']; ?>>Edit</a>
+  <a href=<?php echo strtok($_SERVER['REQUEST_URI'], '?') . 'new'; ?>>New</a>
 </div>

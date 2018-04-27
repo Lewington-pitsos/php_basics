@@ -13,7 +13,9 @@ function puzzle_steps($id) {
   return "SELECT instruction, step_number FROM steps WHERE puzzle_id = $id ORDER BY step_number ASC;";
 }
 
-
+function new_puzzle($params) {
+  return "INSERT INTO puzzles (name, scenario, puzzle, soloution_conclusion, notes) VALUES ('$params[name]', '$params[scenario]', '$params[puzzle]', '$params[soloution_conclusion]', '$params[notes]');";
+}
 
 
 

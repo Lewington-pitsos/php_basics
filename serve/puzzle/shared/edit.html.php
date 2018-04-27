@@ -1,13 +1,13 @@
-<h1><?php echo $puzzle['name'] ?></h1>
+<h1><?php echo $puzzle['name'] ?: 'New Puzzle' ?></h1>
 <form method="POST" action="/puzzle/save/index.php">
 
   <div class="form-group">
-    <input type="number" class="form-control" value=<?php echo $_GET['id'] ?> name="id" hidden>
+    <input type="number" class="form-control" value=<?php echo $_GET['id'] ?: 0 ?> name="id" hidden>
   </div>
 
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" value=<?php echo $puzzle['name'] ?> name="name">
+    <input type="text" class="form-control" value="<?php echo $puzzle['name'] ?: 'choose a name' ?>" name="name">
   </div>
 
   <div class="form-group">
