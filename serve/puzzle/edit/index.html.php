@@ -1,9 +1,19 @@
 <h1><?php echo $puzzle['name'] ?></h1>
-<form method="POST" action="/puzzle/save?id=" <?php echo $_GET['id'] ?>>
+<form method="POST" action="/puzzle/save/index.php">
+
+  <div class="form-group">
+    <input type="number" class="form-control" value=<?php echo $_GET['id'] ?> name="id" hidden>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" value=<?php echo $puzzle['name'] ?> name="name">
+  </div>
+
 
   <div class="form-group">
     <label for="scenario">Scenario</label>
-    <textarea class="form-control" id="scenario" type="text" cols="50" rows="20" name="scenaio"><?php echo $puzzle['scenario'] ?></textarea>
+    <textarea class="form-control" id="scenario" type="text" cols="50" rows="20" name="scenario"><?php echo $puzzle['scenario'] ?></textarea>
   </div>
 
   <div class="form-group">
@@ -22,7 +32,7 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
-  
+
 </form>
 
 <div class='nav'>
