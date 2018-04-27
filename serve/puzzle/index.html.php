@@ -11,6 +11,14 @@
 </p>
 
 <h3>Soloution</h3>
+<ol>
+  <?php foreach ($steps as $key => $value): ?>
+    <li>
+      <?php echo $value[0] ?>
+    </li>
+  <?php endforeach ?>
+</ol>
+
 <p>
   <?php echo $puzzle['soloution_conclusion'] ?>
 </p>
@@ -24,4 +32,5 @@
 
 <div class='nav'>
   <a href='/'>Back</a>
+  <a href=<?php echo strtok($_SERVER['REQUEST_URI'], '?') . 'edit?' . $_SERVER['QUERY_STRING']; ?>>Edit</a>
 </div>
