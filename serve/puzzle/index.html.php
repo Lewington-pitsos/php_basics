@@ -34,4 +34,10 @@
   <a href='/'>Back</a>
   <a href=<?php echo strtok($_SERVER['REQUEST_URI'], '?') . 'edit?' . $_SERVER['QUERY_STRING']; ?>>Edit</a>
   <a href=<?php echo strtok($_SERVER['REQUEST_URI'], '?') . 'new'; ?>>New</a>
+  <form method="POST" action="/puzzle/delete/index.php">
+    <div class="form-group">
+      <input type="number" class="form-control" value=<?php echo $_GET['id'] ?: 0 ?> name="id" hidden>
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+  </form>
 </div>

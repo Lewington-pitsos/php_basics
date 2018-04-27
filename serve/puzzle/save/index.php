@@ -17,8 +17,5 @@ if ($_POST['id'] == 0) {
 
 }
 
-
-
-
 header('location: /');
 exit();

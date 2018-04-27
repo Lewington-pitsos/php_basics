@@ -17,7 +17,9 @@ function new_puzzle($params) {
   return "INSERT INTO puzzles (name, scenario, puzzle, soloution_conclusion, notes) VALUES ('$params[name]', '$params[scenario]', '$params[puzzle]', '$params[soloution_conclusion]', '$params[notes]');";
 }
 
-
+function delete_puzzle($id) {
+  return "DELETE FROM puzzles WHERE id = $id";
+}
 
 //+------------------------------------------------------------------+
 //                                STEPS
