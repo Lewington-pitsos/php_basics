@@ -10,7 +10,6 @@
     <input type="text" class="form-control" value=<?php echo $puzzle['name'] ?> name="name">
   </div>
 
-
   <div class="form-group">
     <label for="scenario">Scenario</label>
     <textarea class="form-control" id="scenario" type="text" cols="50" rows="20" name="scenario"><?php echo $puzzle['scenario'] ?></textarea>
@@ -20,6 +19,17 @@
     <label for="puzzle">Puzzle</label>
     <textarea class="form-control" id="puzzle" type="text" cols="50" rows="20" name="puzzle"><?php echo $puzzle['puzzle'] ?></textarea>
   </div>
+
+  <label>Steps</label>
+  <ol>
+    <?php foreach ($steps as $key => $value): ?>
+      <?php $step_number = "step[$value[step_number]]"?>
+      <div class="form-group">
+        <label for=<?php echo $step_number ?>><?php echo $step_number ?></label>
+        <input type="text" class="form-control" value=<?php echo $value['instruction'] ?> name=<?php echo $step_number ?>>
+      </div>
+    <?php endforeach ?>
+  </ol>
 
   <div class="form-group">
     <label for="soloution_conclusion">Soloution Concolusion</label>

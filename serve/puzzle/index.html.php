@@ -14,7 +14,7 @@
 <ol>
   <?php foreach ($steps as $key => $value): ?>
     <li>
-      <?php echo $value[0] ?>
+      <?php echo $value['instruction'] ?>
     </li>
   <?php endforeach ?>
 </ol>

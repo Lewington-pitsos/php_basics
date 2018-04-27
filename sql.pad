@@ -45,3 +45,8 @@ INSERT INTO steps (step_number, instruction, puzzle_id)
 
 INSERT INTO steps (step_number, instruction, puzzle_id)
   VALUES (2, 'it\'s a very good place to start', 1);
+
+
+INSERT INTO steps (step_number, instruction, puzzle_id)
+    VALUES (1, 'its a very good place to start', 2),
+    (2, 'its a very good place to start', 2);
