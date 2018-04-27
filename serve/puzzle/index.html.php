@@ -21,3 +21,7 @@
     <?php echo $puzzle['notes'] ?>
   </p>
 <?php endif; ?>
+
+<div class='nav'>
+  <a href='/'>Back</a>
+</div>
